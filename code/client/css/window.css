@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+.window-background {
+    background-color: #00000064;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.popup-window {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: none;
+    margin: auto;
+    padding: 1.2rem 0.6rem 0.6rem;
+    text-align: center;
+    width: 30%;
+}
+
+.popup-window h2 {
+    padding: 0.6rem 0;
+}
+
+.popup-window p {
+    font-size: 0.8rem;
+}
+
+.popup-window form {
+    margin: auto;
+    width: 60%;
+}
+
+.popup-window form div {
+    overflow: hidden;
+    padding: 0 0 9px;
+    position: relative;
+    width: 100%;
+}
+
+.popup-window form label {
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.popup-window form label::after {
+    border-bottom: 0.15rem solid crimson;
+    content: "";
+    height: 3rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: 100%;
+}
+
+.popup-window form label span {
+    bottom: -2.7rem;
+    left: 0;
+    position: absolute;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.popup-window form input[type="password"],
+.popup-window form input[type="tel"],
+.popup-window form input[type="text"] {
+    border: none;
+    border-bottom: 0.1rem solid black;
+    border-radius: 0;
+    font-size: 1rem;
+    height: 2rem;
+    outline: none;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+.popup-window form input[type="button"] {
+    background-color: crimson;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: 0.6rem;
+    padding: 0.6rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.popup-window form input[type="button"]:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.popup-window form input[type="button"]:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.popup-window form div input:focus + label::after,
+.popup-window form div input:valid + label::after {
+    transform: translateX(0);
+}
+
+.popup-window form div input:focus + label span,
+.popup-window form div input:valid + label span {
+    color: crimson;
+    font-size: 0.6rem;
+    transform: translateY(-150%);
+}
+
+.popup-window .table {
+    padding: 0;
+    margin: 0;
+    max-height: 24rem;
+    overflow: auto;
+}
+
+.popup-window table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.popup-window table th, td {
+    border: 1px solid #f0f0f0;
+    padding: 0.3rem 0.6rem;
+}
+
+.popup-window table th {
+    background-color: #f0f0f0;
+    border-bottom: 2px solid black;
+}
+
+.popup-window table td input::-webkit-inner-spin-button,
+.popup-window table td input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.popup-window table td input {
+    margin: auto;
+    outline: none;
+    text-align: center;
+    width: 3rem;
+}
+
+.popup-window table span {
+    cursor: pointer;
+    display: inline;
+    margin: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.popup-window table span:hover {
+    font-weight: bolder;
+}

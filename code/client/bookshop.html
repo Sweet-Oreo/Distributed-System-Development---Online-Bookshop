@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Bookshop</title>
+
+    <link href="/css/header.css" rel="stylesheet" type="text/css">
+    <link href="/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/css/window.css" rel="stylesheet" type="text/css">
+    <link href="/css/snackbar.css" rel="stylesheet" type="text/css">
+    <link href="/css/top.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <script rel="script" src="/js/ajax.js" type="text/javascript"></script>
+    <script rel="script" src="/js/cart.js" type="text/javascript"></script>
+    <script rel="script" src="/js/footer.js" type="text/javascript"></script>
+    <script rel="script" src="/js/index.js" type="text/javascript"></script>
+    <script rel="script" src="/js/modify.js" type="text/javascript"></script>
+    <script rel="script" src="/js/search.js" type="text/javascript"></script>
+    <script rel="script" src="/js/sign.js" type="text/javascript"></script>
+    <script rel="script" src="/js/snackbar.js" type="text/javascript"></script>
+    <script rel="script" src="/js/top.js" type="text/javascript"></script>
+    <script rel="script" src="/js/txn.js" type="text/javascript"></script>
+    <script rel="script" src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js" type="text/javascript"></script>
+
+</head>
+
+
+<body>
+
+<div class="window-background" id="window-background">
+    <div class="popup-window" id="sign-up">
+        <h2>Sign Up</h2>
+        <form onsubmit="return false">
+            <div>
+                <input id="sign-up-tel" required type="tel">
+                <label for="sign-up-tel"><span>Telephone</span></label>
+            </div>
+            <div>
+                <input id="sign-up-name" required type="text">
+                <label for="sign-up-name"><span>Name</span></label>
+            </div>
+            <div>
+                <input id="sign-up-passwd" required type="password">
+                <label for="sign-up-passwd"><span>Password</span></label>
+            </div>
+            <div>
+                <input id="sign-up-confirm" required type="password">
+                <label for="sign-up-confirm"><span>Confirm password</span></label>
+            </div>
+            <div>
+                <input id="sign-up-card" required type="text">
+                <label for="sign-up-card"><span>Card number</span></label>
+            </div>
+            <div>
+                <input id="sign-up-addr" required type="text">
+                <label for="sign-up-addr"><span>Address</span></label>
+            </div>
+            <div>
+                <input id="sign-up-submit" type="button" value="SIGN UP">
+                <input id="sign-up-cancel" type="button" value="CANCEL">
+            </div>
+        </form>
+    </div>
+    <div class="popup-window" id="sign-in">
+        <h2>Sign In</h2>
+        <form onsubmit="return false">
+            <div>
+                <input id="sign-in-tel" required type="tel">
+                <label for="sign-in-tel"><span>Telephone</span></label>
+            </div>
+            <div>
+                <input id="sign-in-passwd" required type="password">
+                <label for="sign-in-passwd"><span>Password</span></label>
+            </div>
+            <div>
+                <input id="sign-in-submit" type="button" value="SIGN IN">
+                <input id="sign-in-cancel" type="button" value="CANCEL">
+            </div>
+        </form>
+    </div>
+    <div class="popup-window" id="modify-card-window">
+        <h2>Modify card</h2>
+        <p id="current-card"></p>
+        <form onsubmit="return false">
+            <div>
+                <input id="modify-card" required type="text">
+                <label for="modify-card"><span>New card</span></label>
+            </div>
+            <div>
+                <input id="modify-card-submit" type="button" value="MODIFY">
+                <input id="modify-card-cancel" type="button" value="CANCEL">
+            </div>
+        </form>
+    </div>
+    <div class="popup-window" id="modify-addr-window">
+        <h2>Modify address</h2>
+        <p id="current-addr"></p>
+        <form onsubmit="return false">
+            <div>
+                <input id="modify-addr" required type="text">
+                <label for="modify-addr"><span>New address</span></label>
+            </div>
+            <div>
+                <input id="modify-addr-submit" type="button" value="MODIFY">
+                <input id="modify-addr-cancel" type="button" value="CANCEL">
+            </div>
+        </form>
+    </div>
+    <div class="popup-window" id="modify-passwd-window">
+        <h2>Modify password</h2>
+        <form onsubmit="return false">
+            <div>
+                <input id="modify-passwd-old" required type="password">
+                <label for="modify-passwd-old"><span>Old password</span></label>
+            </div>
+            <div>
+                <input id="modify-passwd" required type="password">
+                <label for="modify-passwd"><span>New password</span></label>
+            </div>
+            <div>
+                <input id="modify-passwd-confirm" required type="password">
+                <label for="modify-passwd-confirm"><span>Confirm password</span></label>
+            </div>
+            <div>
+                <input id="modify-passwd-submit" type="button" value="MODIFY">
+                <input id="modify-passwd-cancel" type="button" value="CANCEL">
+            </div>
+        </form>
+    </div>
+    <div class="popup-window" id="cart-window" style="width: 64%">
+        <h2>Cart</h2>
+        <form onsubmit="return false" style="width: 84%">
+            <div class="table">
+                <table id="cart-list"></table>
+            </div>
+            <div>
+                <input id="cart-submit" type="button" value="PURCHASE">
+                <input id="cart-clean" type="button" value="CLEAN CART">
+                <input id="cart-cancel" type="button" value="CLOSE">
+            </div>
+        </form>
+    </div>
+    <div class="popup-window" id="txn-window" style="width: 64%">
+        <h2>Transactions</h2>
+        <form onsubmit="return false" style="width: 84%">
+            <div class="table">
+                <table id="txn-list"></table>
+            </div>
+            <div>
+                <input id="txn-cancel" type="button" value="CLOSE">
+            </div>
+        </form>
+    </div>
+</div>
+
+<header>
+    <div class="header-left">
+        <ul>
+            <li><a>Bookshop</a></li>
+        </ul>
+    </div>
+    <div class="header-center">
+        <label for="searchbar" hidden></label>
+        <input id="searchbar" oninput="page=1;search(true)" placeholder="Search something in bookshop..." type="text">
+    </div>
+    <div class="header-right">
+        <ul id="sign-operations"></ul>
+    </div>
+</header>
+
+<main id="main">
+    <div class="card-list" id="card-list"></div>
+    <div class="card-list">
+        <div class="card-more" id="card-more" onclick="page++;search()">
+            <p>Show more results</p>
+        </div>
+    </div>
+</main>
+
+<footer id="footer">
+    <p class="footer-title">Bookshop</p>
+    <p class="footer-copyright">Copyright &copy; 2021 CNSCC311 Team 6. All rights are reserved.</p>
+</footer>
+
+<button class="material-icons" id="back-to-top" onclick="backToTop()">arrow_upward</button>
+
+<div class="snackbar" id="snackbar">
+    <div class="snackbar-body">
+        <p class="snackbar-left" id="snackbar-info"></p>
+        <p class="snackbar-right"><a id="snackbar-btn"></a></p>
+    </div>
+</div>
+
+</body>
+
+</html>

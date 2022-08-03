@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+footer {
+    background-color: transparent;
+    border-top: 1px solid #e0e0e0;
+    bottom: 0;
+    margin-top: 1.2rem;
+    overflow: hidden;
+    padding: 0.6rem 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-title {
+    font-family: serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-copyright {
+    font-size: 0.6rem;
+}

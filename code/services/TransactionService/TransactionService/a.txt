@@ -1,0 +1,39 @@
+com.google.code.gson: This external library is used in our project to convert map structure to JSON string, or convert JSON string to a map structure.
+https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.6
+
+mysql-connector-java: This external library is used to access database with JDBC.
+https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.23
+
+
+
+DatabaseService: This is a SOAP service. This service directly interacts with the database. 
+In DatabaseService:
+"dao" package includes classes that handle specific aspect of data. For example, "CartDao.java" handles all data about cart.
+"service" package includes classes constructing this SOAP service.
+"util" package includes class that support JDBC.
+
+UserService: This is a RESTful service. It handles request from client side when the user wants to register an account, login, or update personal information. This service also serves as a client calling SOAP services including Database Service and User Verify Service.
+In UserService:
+"UserService" package includes servlet that support this RESTful service.
+
+CartService: This is a RESTful service. It handles request from client side when the
+user wants to check books in the cart, add books to cart, delete books in cart, or update number of books in cart. This service also serves as a client calling SOAP services including Database Service and User Verify Service.
+In CartService:
+"CartService" package includes servlet that support this RESTful service.
+
+UserVerifyService: This is a SOAP service. It verifies the authenticity of the user.
+In UserVerifyService:
+"UserVerifyService" package includes classes constructing this SOAP service.
+
+TransactionService: This is a RESTful service. It handles request from client side when the user wants to submit order and make a payment, acknowledge the receipt of books, return books, or check all the past transactions or ordering. This service also serves as a client calling SOAP services including Database Service and User Verify Service.
+In TransactionService:
+"TransactionService" package includes servlet that support this RESTful service.
+
+BookService: This is a RESTful service. It handles access to book information.
+In BookService:
+"dao" package includes classes that directly access database;
+"po" package is Persistence Object.
+"service" package includes class that handles logic.
+"util" package includes class that support JDBC.
+"vo" package includes servlet that handle request from client to view available books.
+

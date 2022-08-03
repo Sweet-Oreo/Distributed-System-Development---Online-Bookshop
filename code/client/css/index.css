@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    color: black;
+    background-color: #ffb8c0;
+}
+
+body {
+    background-color: #f0f0f0;
+}

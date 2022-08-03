@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+main {
+    padding-top: 3.3rem;
+    width: 100%;
+}
+
+.card-list {
+    width: 75%;
+    margin: auto;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin: 0.6rem;
+    padding: 0.6rem 1.2rem;
+}
+
+.card-left {
+    line-height: 1.8rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.3rem;
+}
+
+.card-author {
+}
+
+.card-publisher {
+}
+
+.card-price {
+    color: crimson;
+    font-size: 1.5rem;
+    padding: 0.3rem 0;
+}
+
+.card-right {
+    text-align: right;
+}
+
+.card-right div {
+    padding: 0.6rem 0;
+    display: table;
+    margin: 0 auto;
+}
+
+.card-right a,
+.card-right input[type="number"] {
+    border: 1px solid #f0f0f0;
+    border-radius: 0;
+    box-sizing: content-box;
+    display: inline-block;
+    font-size: 0.9rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    outline: none;
+    vertical-align: top;
+    text-align: center;
+    width: 1.5rem;
+}
+
+.card-right a {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    background-color: #f0f0f0;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    user-select: none;
+}
+
+.card-right a:hover {
+    background-color: #eaeaea;
+    border-color: #eaeaea;
+}
+
+.card-right a:active {
+    background-color: #e3e3e3;
+    border-color: #e3e3e3;
+}
+
+.card-right input[type="number"] {
+    border-left: none;
+    border-right: none;
+    color: black;
+    width: 3.6rem;
+}
+
+.card-right input[type="number"]::-webkit-inner-spin-button,
+.card-right input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.card-right p {
+    font-size: 0.3rem;
+    text-align: center;
+}
+
+.card-right button {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    background-color: #f0f0f0;
+    border-radius: 0.3rem;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: black;
+    cursor: pointer;
+    font-size: 0.9rem;
+    outline: none;
+    padding: 0.5rem 0.7rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    user-select: none;
+}
+
+.card-right button:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card-right button:active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-error {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
+}
+
+.card-more {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    cursor: pointer;
+    display: none;
+    margin: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    user-select: none;
+}
+
+.card-more:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-more:active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
